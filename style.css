@@ -2,44 +2,55 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: linear-gradient(to bottom, #3882e2, #62cc7c);
+    background: linear-gradient(135deg,#e0c3fc,#8ec5fc);
     font-family: sans-serif;
 }
 .container{
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to bottom, #3882e2, #62cc7c);
+    
 }
 .topbar{
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    color: white;
+    color: #fff;
+    font-weight: 600;
 }
 .newBook{
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
+    
 }
 .book-section{
     display: grid;
     margin: 0 auto;
     gap: 40px;
-    
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
 }
 .book{
     display: flex;
     flex-direction: column;
-    width: 250px;
-    height: 300px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 400px;
     background-color: white;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.book:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 .image{
-    width: 250px;
-    height: 200px;
+    width: 100%;
+    height: 250px;
     overflow: hidden;
 
 }
@@ -47,6 +58,8 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 12px;
+    background-color: #f0f0f0;
 }
 .topbar p{
     font-size: 40px;
@@ -56,13 +69,57 @@ body{
     width: 150px;
     height: 40px;
     font-size: 20px;
-    background: linear-gradient(to left, #b9cc62,#e238a1);
-    border-radius: 8px;
+    background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+    border-radius: 12px;
     color: white;
-    
+    border: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+.new-book:hover{
+    transform: scale(1.03);
 }
 .book .button{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 30px 1fr 100px;
     
+
+    
+}
+svg{
+    color: #fff;
+    
+}
+.title{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    text-align: center;
+    color: #333;
+}
+.author{
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.delete{
+    padding: 6px 12px;
+    width: 100px;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #ff6b6b;
+    transition: backgroud-color 0.3s;
+
+}
+.delete:hover{
+    background-color: #e04848;
 }
