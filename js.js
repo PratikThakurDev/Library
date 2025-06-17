@@ -42,17 +42,15 @@ form.addEventListener("submit", function (e) {
   const title = document.querySelector("#bookTitle").value;
   const author = document.querySelector("#bookAuthor").value;
   const image = document.querySelector("#bookImage").value;
-  const isRead = document.querySelector('.Completed').unchecked;
 
-
-  const newBook = new Book(title, author, image); 
-  newBook.read = isRead; 
+  const newBook = new Book(title, author, image);  
 
   myLibrary.push(newBook); 
 
   form.reset(); 
   modal.style.display = "none"; 
   renderBooks(); 
+
 });
 
 
