@@ -1,13 +1,14 @@
 let myLibrary = [];
 
 // Book Constructor
-function Book(title, author, imageUrl) {
+class Book {
+  constructor(title, author, imageUrl){
   this.title = title;
   this.author = author;
   this.imageUrl = imageUrl;
   this.id = crypto.randomUUID(); 
   this.read = false; 
-}
+}}
 
 
 Book.prototype.toggleReadStatus = function() {
